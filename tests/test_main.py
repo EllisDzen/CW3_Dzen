@@ -19,7 +19,7 @@ def mask_card_number(card_info):
         if card_name == 'Счет':
             masked_number = f"**** {card_number[-4:]}"
         else:
-            masked_number = f"{card_number[:6]}{'*' * (len(card_number) - 10)} {card_number[-4:]}"
+            masked_number = f"{card_number[:6]}{'*' * (len(card_number) - 10)}{card_number[-4:]}"  # Убран лишний пробел
 
         return f"{card_name} {masked_number}"
     else:
